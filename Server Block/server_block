@@ -1,0 +1,20 @@
+/etc/nginx/website/server_block
+
+server {
+  listen 80
+  listen [::]: 80;
+  # This will tell nginx to listen for HTTP requests on port 80
+
+  server_name webgen;
+
+  root /var/lib/webgen/HTML;
+  # when a request is received, Nginx will look for files to serve in /var/lib/webgen/HTML
+  index index.html
+
+  locaton /documents/ {
+    root /var/lib/webgen;
+    autoindex on; # To show the files inside /documtents
+    try_files $uri $uri/ =404
+    # if there was an error loading it in 
+  }
+}
