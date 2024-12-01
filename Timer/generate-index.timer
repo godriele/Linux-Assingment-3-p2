@@ -1,0 +1,10 @@
+[Unit] 
+Description=Timer For Index Service
+
+[Timer]
+OnCalendar=*-*-* 05:00:00
+Persistent=true
+# This will make sure the service will be triggered as soon as the system turns on
+
+[Install] 
+WantedBy=timers.target
