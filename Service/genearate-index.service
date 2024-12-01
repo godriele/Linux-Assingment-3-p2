@@ -1,0 +1,14 @@
+[Unit]
+Description=Index
+After=network-online.target
+
+
+[Service]
+User=webgen
+Group=webgen
+ExectStart=var/lib/webgen/bin/generate_index
+WorkingDirectory=/var/lib/webgen
+
+[Install]
+WantedBy=multi-user.target
+
