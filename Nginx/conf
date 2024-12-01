@@ -1,0 +1,17 @@
+user webgen; <-- this line 
+worker_process 1; 
+
+#error_log  logs/error.log
+#error_log  logs/error.log notice;
+#error_log  logs/error.log info;
+
+events {
+ worker_connection 1024;
+}
+
+http {
+  types_hash_max_size 4096;  <-- this line
+  types_hash_bucket_zie 64;  <-- this line
+  include      mime.types;
+  include    /etc/nginx/sites-enabled/*; <-- this line
+}
