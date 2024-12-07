@@ -220,4 +220,5 @@ We now want to visit our load balancer site -> vist `http://<loadbalancerIpadd>`
 ---
 ---
 # Video 
-https://youtu.be/jnG1q4Oqteo
+https://youtu.be/qOafv8baYzA
+
